@@ -205,3 +205,42 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+# Data
+*.csv
+*.json
+*.xlsx
+!data_schema.json  # Example of keeping a structure file but ignoring the data
+# Quantum SDKs
+.qiskit/
+.pennylane/
+*.log
+# Saved Models
+*.pkl
+*.h5
+*.joblib
+*.npy
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# Virtual Environments
+venv/
+.env
+env/
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# Data and Models (Project Specific)
+dataset.csv
+*.pkl
+*.npy
+
+# OS generated files
+.DS_Store
+# Ignore contents of these folders, but keep the folders
+data/*
+models/*
+!data/.gitkeep
+!models/.gitkeep
