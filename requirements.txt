@@ -1,0 +1,7 @@
+pennylane
+pennylane-qiskit
+tensorflow
+pandas
+scikit-learn
+matplotlib
+ipykernel
