@@ -5,16 +5,7 @@ import tensorflow as tf
 import pennylane as qml
 from pennylane import numpy as np
 from sklearn.metrics import roc_auc_score
-
-# Ensure the script can find the 'src' directory for imports
-base_dir = os.path.dirname(os.path.abspath(__file__))
-sys.path.append(os.path.join(base_dir, '..'))
-
-try:
-    from src.data_processing import process_fraud_data
-except ImportError:
-    # Fallback if run directly from within the src folder
-    from data_processing import process_fraud_data
+from src.data_processing import process_fraud_data
 
 def run_final_validation(new_data_path):
     print(f"--- Phase 4: Generalization Test on {new_data_path} ---")
@@ -37,8 +28,8 @@ def run_final_validation(new_data_path):
     print(f"Detected target '{actual_target}', standardizing to 'fraud'...")
     df = df.rename(columns={actual_target: 'fraud'})
 
-    # 2. Save temporary standardized file for the processing pipeline
-    temp_path = os.path.join(base_dir, "..", "data", "temp_standardized.csv")
+    # This joins your CWD + "data" + "temp_standardized.csv"
+    temp_path = os.path.join("data", "temp_standardized.csv")
     df.to_csv(temp_path, index=False)
 
     # 3. Process Data (Applying PCA reduction to 4 features)
