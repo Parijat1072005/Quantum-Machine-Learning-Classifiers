@@ -21,7 +21,7 @@ Create a folder inside the Quantum-Machine-Learning-Classifiers named "Data".
 
 
 
-Put the csv files in it.
+Put the csv files in it, you can find it in the initial project release.
 
 
 
