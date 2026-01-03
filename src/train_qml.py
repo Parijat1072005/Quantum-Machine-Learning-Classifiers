@@ -20,7 +20,7 @@ def cost(weights, features, labels):
     preds = [model_predict(weights, x) for x in features]
     return square_loss(labels, preds)
 
-def train_qml_model(epochs=20, learning_rate=0.1):
+def train_qml_model(epochs=25, learning_rate=0.1):
     # 1. Load data
     X_train, X_test, y_train, y_test, _ = process_fraud_data('data/dataset.csv')
     
