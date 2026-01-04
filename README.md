@@ -31,6 +31,9 @@ Put the csv files in it, you can find it in the initial project release.
 >>%cd Quantum-Machine-Learning-Classifiers
 
 
+>>!pip install -r requirements.txt
+
+
 >>%run src/data_processing.py
 
 
